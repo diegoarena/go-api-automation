@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  tests:
+    container_name: 'go-api-automation-example'
+    image: 'go-api-automation-example'
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - .:/home/test
+    working_dir: /home/test

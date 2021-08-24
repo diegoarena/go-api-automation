@@ -5,9 +5,11 @@ this repo contains example of integration tests developed in golang with testify
 - golang 1.5 
 - testify  `go get -u github.com/stretchr/testify`
 - resty    `go get -u github.com/go-resty/resty/v2`
+- docker
 
 ### How to run test ###
 Inside of project run:
+ docker-compose up --build
 ```bash
 $ go test -v ./...
 ?       go-api-integration-tests        [no test files]

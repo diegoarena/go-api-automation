@@ -16,7 +16,7 @@ func LoadEnv() {
 	rootPath := re.Find([]byte(cwd))
 	err := godotenv.Load(string(rootPath) + `/.env`)
 	if err != nil {
-		panic(err)
+		//panic(err)
 	}
 }
 

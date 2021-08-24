@@ -24,7 +24,8 @@ func (suite *UsersTestSuite) SetupSuite() {
 	lib.LoadEnv()
 	//instanciate rest client
 	suite.ApiClient = resty.New()
-	suite.EndpointUrl = lib.GetEnvVariable("BASE_URL") + "/users"
+	//suite.EndpointUrl = lib.GetEnvVariable("BASE_URL") + "/users"
+	suite.EndpointUrl = "https://jsonplaceholder.typicode.com/users"
 }
 
 // test runner (needed to run testify with go testing lib)
