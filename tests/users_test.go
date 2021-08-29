@@ -33,7 +33,7 @@ func TestConceptListTestSuite(t *testing.T) {
 	suite.Run(t, new(UsersTestSuite))
 }
 
-func (suite *UsersTestSuite) TestGetUsers() {
+func (suite *UsersTestSuite) TestSmoke() {
 	suite.T().Run("Should success to get all users", func(t *testing.T) {
 		//response dto
 		users := []dto.Users{}
@@ -56,13 +56,13 @@ func (suite *UsersTestSuite) TestGetUsers() {
 			assert.NotEmpty(t, user.Email)
 			assert.NotEmpty(t, user.Username)
 			assert.NotNil(t, user.Address)
-			assert.NotNil(t, user.Company)
+			assert.Empty(t, user.Company, "Company is not empty")
 		}
 	})
 
 }
 
-func (suite *UsersTestSuite) TestGetUser() {
+func (suite *UsersTestSuite) TestRegression() {
 	suite.T().Run("Should success to get a user", func(t *testing.T) {
 		//response dto
 		user := dto.Users{}
