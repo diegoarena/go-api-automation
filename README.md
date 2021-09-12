@@ -8,11 +8,11 @@ this repo contains example of integration tests developed in golang with testify
 - docker
 
 ### How to run test ###
-Build de the docker image 
+First build the docker image 
 ```bash
 $ docker-compose build
 ```
-Inside of project run:
+Run the tests
 ```bash
 $ docker run -v ${pwd}:/test --rm=false go-api-automation-example gotestsum --format testname -- -run TestConceptListTestSuite/TestRegression ./...
 EMPTY dto
