@@ -85,6 +85,6 @@ func (suite *UsersTestSuite) TestRegression() {
 		assert.NotEmpty(t, user.Email)
 		assert.NotEmpty(t, user.Username)
 		assert.NotNil(t, user.Address)
-		assert.NotNil(t, user.Company)
+		assert.NotEmpty(t, user.Company)
 	})
 }

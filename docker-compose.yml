@@ -7,5 +7,5 @@ services:
       context: .
       dockerfile: dockerfile
     volumes:
-      - .:/home/test
-    working_dir: /home/test
+      - .:/test
+    working_dir: /test
