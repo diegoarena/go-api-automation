@@ -6,6 +6,3 @@ services:
     build:
       context: .
       dockerfile: dockerfile
-    volumes:
-      - .:/test
-    working_dir: /test
