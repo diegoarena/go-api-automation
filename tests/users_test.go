@@ -56,7 +56,7 @@ func (suite *UsersTestSuite) TestSmoke() {
 			assert.NotEmpty(t, user.Email)
 			assert.NotEmpty(t, user.Username)
 			assert.NotNil(t, user.Address)
-			assert.Empty(t, user.Company, "Company is not empty")
+			assert.NotEmpty(t, user.Company, "Company is not empty")
 		}
 	})
 
