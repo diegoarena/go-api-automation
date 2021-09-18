@@ -3,6 +3,9 @@ services:
   tests:
     container_name: 'go-api-automation-example'
     image: 'go-api-automation-example'
+    tty: true 
     build:
       context: .
       dockerfile: dockerfile
+    volumes: 
+      - .:/test

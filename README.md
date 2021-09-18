@@ -8,13 +8,13 @@ this repo contains example of integration tests developed in golang with testify
 - docker
 
 ### How to run test ###
-First build the docker image 
+Build and run the docker container  
 ```bash
-$ docker-compose build
+$ docker-compose up --build -d
 ```
 Run the tests
 ```bash
-$ docker run -v ${pwd}:/test --rm=false go-api-automation-example gotestsum --format testname -- -run TestConceptListTestSuite/TestRegression ./...
+$ docker exec -ti go-api-automation-example gotestsum --format testname -- -run TestConceptListTestSuite/TestRegression ./... -count=1
 EMPTY dto
 EMPTY lib
 PASS tests.TestConceptListTestSuite/TestRegression/Should_success_to_get_a_user (0.55s)
@@ -22,7 +22,7 @@ PASS tests.TestConceptListTestSuite/TestRegression (0.55s)
 PASS tests.TestConceptListTestSuite (0.55s)
 PASS tests
 
-DONE 3 tests in 3.659s
+DONE 3 tests in 0.993s
 ```
 
 ### Reporting the results ###
