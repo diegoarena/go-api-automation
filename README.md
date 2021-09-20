@@ -12,7 +12,7 @@ Build and run the docker container
 ```bash
 $ docker-compose up --build -d
 ```
-Run the tests
+Run the tests using gotestsum 
 ```bash
 $ docker exec -ti go-api-automation-example gotestsum --format testname -- -run TestConceptListTestSuite/TestRegression ./... -count=1
 EMPTY dto
@@ -25,5 +25,7 @@ PASS tests
 DONE 3 tests in 0.993s
 ```
 
-### Reporting the results ###
-Soon..
+### Generate report ###
+```bash
+$ docker exec -ti go-api-automation-example go test -json ./... | go-test-report  
+```
