@@ -9,3 +9,5 @@ services:
       dockerfile: dockerfile
     volumes: 
       - .:/test
+    environment: 
+      - BASE_URL=https://jsonplaceholder.typicode.com

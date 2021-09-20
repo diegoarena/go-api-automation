@@ -10,7 +10,9 @@ RUN set -ex; \
 
 RUN go get github.com/githubnemo/CompileDaemon
 RUN go get gotest.tools/gotestsum
+RUN go get -u github.com/vakenbolt/go-test-report/
 
+#Download project dependencies 
 COPY ./go.mod .
 COPY ./go.sum .
 RUN go mod download
