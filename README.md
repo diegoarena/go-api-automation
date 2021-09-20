@@ -30,3 +30,4 @@ DONE 3 tests in 0.993s
 ```bash
 $ docker exec -ti go-api-automation-example go test -json ./... | go-test-report  
 ```
+![Report](/report.png)
