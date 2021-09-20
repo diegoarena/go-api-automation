@@ -5,7 +5,7 @@ this repo contains example of integration tests developed in golang with testify
 - golang 1.5 
 - testify  `go get -u github.com/stretchr/testify`
 - resty    `go get -u github.com/go-resty/resty/v2`
-or use the docker image 
+or directly run the example using docker 
 - docker
 
 ### run the tests ###
